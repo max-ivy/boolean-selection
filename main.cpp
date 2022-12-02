@@ -15,15 +15,9 @@ using namespace std;
 
 int main() {
 	// FORMATTING CONSTANTS
-	const int 	 INPUT_COL 		= 8;
+	const int 	 INPUT_COL 	= 8;
 	const int 	 PROMPT_COL 	= 63;
-	const int    MAX_LINE_SIZE	= 24;
-
-	// CLASS HEADER CONSTANTS
-	const string AS_NAME		= "ASSIGNMENT";
-	const int    AS_NUM			= 6;
-	const char   AS_TYPE		= 'A';
-	const string PROG_NAME		= "Max Ivy";
+	const int    	 MAX_LINE_SIZE	= 24;
 
 	// HEIGHT & WEIGHT CONSTANTS
 	const int	 M_MIN_HEIGHT = 65;
@@ -39,12 +33,12 @@ int main() {
 	char 	candidateGender;		// IN & CALC  : candidate gender
 	int 	candidateHeight;		// IN & CALC  : candidate height
 	int 	candidateWeight;		// IN & CALC  : candidate weight
-	int		acceptedCandidates;		// CALC & OUT : # of accepted candidates
-	int		totalCandidates;		// CALC		  : total # of candidates
+	int	acceptedCandidates;		// CALC & OUT : # of accepted candidates
+	int	totalCandidates;		// CALC		  : total # of candidates
 	float	acceptanceRate;			// CALC & OUT : % of accepted candidates
 	bool 	acceptableHeight;		// CALC		  : correct height conditions
 	bool 	acceptableWeight;		// CALC		  : correct weight conditions
-	bool	invalid;				// CALC		  : while loop conditions
+	bool	invalid;			// CALC		  : while loop conditions
 
 	//	INITIALIZATIONS
 	totalCandidates		= 0;
@@ -64,15 +58,15 @@ int main() {
 
 	// While loop condition initialization
 	invalid = (candidateGender == 'X') ||
-			  (candidateGender == 'x');
+		  (candidateGender == 'x');
 
 	// While loop while candidate gender input is not invalid
 	while (!invalid)
 	{
 		//	INPUT HEIGHT - Prompts user for height input
 		cout << left
-			 << setw(INPUT_COL)
-			 << "Height: ";
+		     << setw(INPUT_COL)
+		     << "Height: ";
 		cin  >> candidateHeight;
 		cin.ignore(10000, '\n');
 
